@@ -1,0 +1,19 @@
+<div class="row">
+<div id="reset" class="col s6 offset-s3">
+        <h1>Fogot your pass?</h1>
+        {{#if resErr}}
+          <p class="alert">{{resErr}}</p>
+        {{/if}}
+        <form action="/auth/reset" method="POST" novalidate>
+          <div class="input-field">
+                <input name="email"  id="email" type="text" class="validate" required>
+                <label for="email">Your Email</label>
+                <span class="helper-text" data-error="Type your email"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary reset-btn">Restore your pass</button>
+
+          <input name="_csrf" type="hidden" value="{{csrf}}">
+      </form>
+    </div>
+  </div>

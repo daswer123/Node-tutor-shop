@@ -1,0 +1,42 @@
+<h2>Courses page</h2>
+
+{{#if courses.length}}
+<div class="row">
+{{#each courses}}
+    <div class="col s6 offset-s3">
+      <div class="card">
+          <div class="card-image">
+              <img src="{{img}}" alt="{{name}}">
+          </div>
+        <div class="card-content">
+          <span class="card-title">{{title}}</span>
+          <p class="price">{{price}}</p>
+          <p>Author: <b> {{userId.username}}</b></p>
+        </div>
+        <div class="card-action">
+          <a href="/courses/{{id}}" target="__blank">Open Course</a>
+          {{#if @root.isAuth}}
+
+            {{#ifqe userId._id @root.userId}}
+
+              <a href="/courses/{{id}}/edit?allow=true">Edit Course</a>
+              
+            {{/ifqe}}
+              <form action="/cart/add" method="POST">
+                <input type="hidden" name="id" value="{{id}}">
+                <button type="submit" class="btn btn-primary">Buy</button>
+
+                <input name="_csrf" type="hidden" value="{{@root.csrf}}">
+              </form>
+
+
+          {{/if}}
+        </div>
+      </div>
+    </div>
+{{/each}}
+  </div>
+{{else}}
+    <pre>Курсов нет</pre>
+{{/if}}
+

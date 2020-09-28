@@ -1,0 +1,43 @@
+<h2>Order page</h2>
+
+{{#if orders.length}}
+{{#each orders}}
+<div class="row orders">
+    <div class="col s6 offset-s3">
+      <div class="card order-card">
+        <div class="card-content">
+          <span class="card-title order-title">{{_id}}</span>
+          <p class="user-data">
+              <span class="username">{{user.username}}</span>
+              <span class="email">"{{user.email}}"</span>
+          </p>
+          <p>Date : <span class="order-date">{{date}}</span></p>
+          <p>Status : <span class="order-status">creating order</span></p>
+          <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Count</th>
+                <th>Price for One</th>
+            </tr>
+        </thead>
+        <tbody>
+          {{#each courses}}
+            <tr>
+                <td>{{course.title}}</td>
+                <td>{{count}}</td>
+                <td class="course-price">${{course.price}}.00</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+        </div>
+        <p class="order-price price">{{price}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+{{else}}
+    <pre>No one ordered</pre>
+{{/if}}
+
