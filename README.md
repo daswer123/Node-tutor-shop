@@ -9,6 +9,7 @@
 ### Основные 
  * [NodeJS](https://nodejs.org/en//)
  * [Express](https://expressjs.com/ru/)
+ * [Handlebars](https://handlebarsjs.com/)
  * [Express-session](https://www.npmjs.com/package/express-session)
  * [Mongoose](https://mongoosejs.com/)
  * [Mongo DB](https://www.mongodb.com/)
