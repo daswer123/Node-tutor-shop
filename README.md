@@ -6,7 +6,7 @@
 [Demo](https://powerful-stream-10102.herokuapp.com/)
 
 # Какие технологии использовались для этого проекта
-###Основные 
+### Основные 
  * [NodeJS](https://nodejs.org/en//)
  * [Express](https://expressjs.com/ru/)
  * [Express-session](https://www.npmjs.com/package/express-session)
@@ -16,7 +16,7 @@
  * [Bcryptjs](https://www.npmjs.com/package/bcrypt)
  * [uuid](https://www.npmjs.com/package/uuid)
  
- ###Вспомогательные 
+ ### Вспомогательные 
   * [Express Validators](https://express-validator.github.io/docs/)
   * [Flash ](https://www.npmjs.com/package/connect-flash)
   * [Csurf ](https://www.npmjs.com/package/csurf)
